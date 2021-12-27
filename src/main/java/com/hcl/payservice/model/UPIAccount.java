@@ -1,5 +1,6 @@
 package com.hcl.payservice.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -11,8 +12,13 @@ import javax.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
-public class UPIAccount {
+public class UPIAccount implements Serializable {
 
+	
+	/**
+	 * Generated Serial ID
+	 */
+	private static final long serialVersionUID = 5733329771240250626L;
 	private static final String PAYTM_UPI = "@paytm";
 	private static final String G_PAY_UPI = "@oaxis";
 	private static final String PHONE_PAY_UPI = "@ybl";

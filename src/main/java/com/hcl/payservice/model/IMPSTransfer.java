@@ -1,5 +1,6 @@
 package com.hcl.payservice.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +9,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class IMPSTransfer {
+public class IMPSTransfer implements Serializable {
+
+
+
+	/**
+	 * Generated Serial Id
+	 */
+	private static final long serialVersionUID = -1923123326141661075L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

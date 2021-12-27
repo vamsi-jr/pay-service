@@ -1,5 +1,6 @@
 package com.hcl.payservice.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -9,7 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class NEFTTransfer {
+public class NEFTTransfer implements Serializable {
+
+	
+	/**
+	 * Generated serial ID
+	 */
+	private static final long serialVersionUID = 9054128459840458285L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
